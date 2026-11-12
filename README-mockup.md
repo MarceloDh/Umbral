@@ -1,6 +1,6 @@
 # Umbral — Panel de acceso con BLE + NFC
 
-Este documento describe el avance de diseño. El flujo de la sumativa y su mockup actualizado están en el [README del proyecto](README.md) y el [mockup de la entrega](docs/mockup.md).
+Este documento describe el diseño inicial. Consulta el [mockup actual](docs/mockup.md) para ver las pantallas de Umbral.
 
 App Android en Kotlin + Jetpack Compose para controlar una puerta:
 
