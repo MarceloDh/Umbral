@@ -14,7 +14,7 @@ sealed class EstadoEscaneo {
 val EstadoEscaneo.mensaje: String
     get() = when (this) {
         is EstadoEscaneo.Inactivo -> "Radar en pausa"
-        is EstadoEscaneo.Iniciando -> "Calibrando antena…"
+        is EstadoEscaneo.Iniciando -> "Iniciando búsqueda…"
         is EstadoEscaneo.Activo -> "Escuchando dispositivos BLE"
         is EstadoEscaneo.SinBluetooth -> "Este equipo no tiene Bluetooth LE"
         is EstadoEscaneo.BluetoothApagado -> "El Bluetooth está apagado"

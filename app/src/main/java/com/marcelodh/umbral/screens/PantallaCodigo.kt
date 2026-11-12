@@ -187,7 +187,7 @@ fun PantallaCodigo(
                 Text(
                     text = "Configura el código en Ajustes",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Ceniza.copy(alpha = 0.6f),
+                    color = Ceniza,
                     textAlign = TextAlign.Center
                 )
                 Spacer(Modifier.height(26.dp))

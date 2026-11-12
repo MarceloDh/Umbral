@@ -151,7 +151,7 @@ fun PantallaAjustes(
                     Text(
                         text = "Entre 5 y 60 segundos",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Ceniza.copy(alpha = 0.6f)
+                        color = Ceniza
                     )
                 }
 
@@ -279,7 +279,7 @@ fun PantallaAjustes(
                 Text(
                     text = "Kotlin + Jetpack Compose\nTaller de Android Mobile e IoT",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Ceniza.copy(alpha = 0.55f),
+                    color = Ceniza,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -348,7 +348,7 @@ private fun DialogoCambioCodigo(
                 Text(
                     text = "La estación puede cambiar el código desde Ajustes.",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Ceniza.copy(alpha = 0.65f)
+                    color = Ceniza
                 )
             }
         },

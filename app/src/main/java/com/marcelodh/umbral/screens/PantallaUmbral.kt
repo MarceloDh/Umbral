@@ -16,6 +16,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.LocalContentColor
@@ -137,6 +138,7 @@ private fun PanelEnlace(vm: ControlUmbral) = Column(verticalArrangement = Arrang
         Button(
             onClick = { vm.conectar(pin); pin = "" },
             enabled = vm.rol != null && vm.seleccionado != null && (vm.rol == Rol.SIMULADOR || pin.length == 4),
+            colors = coloresBotonPanel(),
             modifier = Modifier.fillMaxWidth()
         ) { Text(if (vm.rol == Rol.SIMULADOR) "Iniciar espera" else "Conectar") }
     } else {
@@ -169,15 +171,23 @@ private fun Monitoreo(vm: ControlUmbral) {
                 Button(
                     onClick = vm::solicitarApertura,
                     enabled = conectado && vm.abierta == false && vm.pendiente == null,
+                    colors = coloresBotonPanel(),
                     modifier = Modifier.fillMaxWidth()
                 ) { Text(if (vm.pendiente == null) "Solicitar apertura" else "Esperando confirmación…") }
             } else {
                 Text("Puerta y sensor de presencia simulados.")
                 Button(
                     onClick = vm::simularPresencia, enabled = conectado,
+                    colors = coloresBotonPanel(),
                     modifier = Modifier.fillMaxWidth()
                 ) { Text("Simular presencia") }
             }
         }
     }
 }
+
+@Composable
+private fun coloresBotonPanel() = ButtonDefaults.buttonColors(
+    disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+    disabledContentColor = MaterialTheme.colorScheme.onSurfaceVariant
+)

@@ -34,7 +34,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.marcelodh.umbral.theme.CenizaOscura
+import com.marcelodh.umbral.theme.Ceniza
 import com.marcelodh.umbral.theme.Hueso
 import com.marcelodh.umbral.theme.Laton
 import com.marcelodh.umbral.theme.Terracota
@@ -163,7 +163,7 @@ private fun TeclaNumero(
             text = valor,
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Light,
-            color = if (habilitado) Hueso else CenizaOscura
+            color = if (habilitado) Hueso else Ceniza
         )
     }
 }
@@ -201,7 +201,7 @@ private fun TeclaIcono(
         Icon(
             imageVector = Icons.Rounded.Backspace,
             contentDescription = "Borrar",
-            tint = CenizaOscura,
+            tint = Ceniza,
             modifier = Modifier.size(22.dp)
         )
     }

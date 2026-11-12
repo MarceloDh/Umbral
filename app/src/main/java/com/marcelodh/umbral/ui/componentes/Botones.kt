@@ -36,7 +36,6 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.marcelodh.umbral.theme.Ceniza
-import com.marcelodh.umbral.theme.CenizaOscura
 import com.marcelodh.umbral.theme.Grafito
 import com.marcelodh.umbral.theme.Hueso
 import com.marcelodh.umbral.theme.Laton
@@ -101,7 +100,7 @@ fun BotonPrincipal(
             Icon(
                 imageVector = icono,
                 contentDescription = null,
-                tint = if (habilitado) Obsidiana else CenizaOscura,
+                tint = if (habilitado) Obsidiana else Ceniza,
                 modifier = Modifier.size(18.dp)
             )
             Spacer(Modifier.width(10.dp))
@@ -109,7 +108,7 @@ fun BotonPrincipal(
         Text(
             text = texto,
             style = MaterialTheme.typography.titleMedium,
-            color = if (habilitado) Obsidiana else CenizaOscura
+            color = if (habilitado) Obsidiana else Ceniza
         )
     }
 }

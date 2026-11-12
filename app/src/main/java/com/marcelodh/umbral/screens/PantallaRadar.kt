@@ -246,16 +246,19 @@ fun PantallaRadar(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "Barriendo la puerta…",
+                            text = if (estado is EstadoEscaneo.Activo) "Buscando dispositivos cercanos…"
+                            else "Sin dispositivos detectados",
                             style = MaterialTheme.typography.titleMedium,
                             color = Hueso
                         )
-                        Spacer(Modifier.height(6.dp))
-                        Text(
-                            text = "Los teléfonos y las balizas aparecen cuando emiten una señal. Mantén esta pantalla abierta unos segundos.",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = Ceniza
-                        )
+                        if (estado is EstadoEscaneo.Activo) {
+                            Spacer(Modifier.height(6.dp))
+                            Text(
+                                text = "Los teléfonos y las balizas aparecen cuando emiten una señal.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = Ceniza
+                            )
+                        }
                     }
                 } else {
                     LazyColumn(
@@ -280,7 +283,7 @@ fun PantallaRadar(
                 Text(
                     text = "El radar detecta señales de dispositivos Bluetooth LE cercanos.",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Ceniza.copy(alpha = 0.55f),
+                    color = Ceniza,
                     modifier = Modifier.padding(horizontal = 22.dp, vertical = 8.dp)
                 )
             }

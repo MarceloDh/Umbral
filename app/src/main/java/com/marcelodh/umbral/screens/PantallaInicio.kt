@@ -232,7 +232,7 @@ fun PantallaInicio(
                 Text(
                     text = "Bluetooth LE · NFC · sin nube",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Ceniza.copy(alpha = 0.55f)
+                    color = Ceniza
                 )
                 Spacer(Modifier.height(26.dp))
             }

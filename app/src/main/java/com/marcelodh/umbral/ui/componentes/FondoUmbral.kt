@@ -163,6 +163,7 @@ fun MarcoUmbral(
 ) {
     Scaffold(
         containerColor = Color.Transparent,
+        contentColor = MaterialTheme.colorScheme.onBackground,
         topBar = {
             if (titulo != null) {
                 BarraSuperior(titulo = titulo, alVolver = alVolver, acciones = acciones)

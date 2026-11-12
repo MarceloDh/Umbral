@@ -113,8 +113,18 @@ class ControlUmbral(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             try {
                 val resultado = enDb {
-                    if (registro == null) autenticar(nombre, clave)
-                    else crearCuenta(nombre, clave, registro)?.let { ResultadoIngreso.Correcto(it) }
+                    if (registro == null) {
+                        autenticar(nombre, clave).also { ingreso ->
+                            val detalle = when (ingreso) {
+                                is ResultadoIngreso.Correcto -> "Inicio de sesión aceptado"
+                                ResultadoIngreso.Incorrecto -> "Inicio de sesión rechazado"
+                                ResultadoIngreso.Bloqueado -> "Inicio de sesión bloqueado"
+                            }
+                            registrar("Sesión", detalle, exito = ingreso is ResultadoIngreso.Correcto)
+                        }
+                    } else {
+                        crearCuenta(nombre, clave, registro)?.let { ResultadoIngreso.Correcto(it) }
+                    }
                 }
                 when (resultado) {
                     is ResultadoIngreso.Correcto -> {
@@ -383,10 +393,6 @@ class ControlUmbral(app: Application) : AndroidViewModel(app) {
 
     override fun onCleared() {
         enlace?.cerrar()
-        // Cerrar el helper después de cualquier escritura en curso.
-        kotlinx.coroutines.CoroutineScope(Dispatchers.IO).launch {
-            accesoDb.withLock { datos.close() }
-        }
         super.onCleared()
     }
 }

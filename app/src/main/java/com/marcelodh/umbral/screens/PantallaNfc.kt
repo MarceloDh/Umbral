@@ -303,7 +303,7 @@ fun PantallaNfc(
                     Text(
                         text = "El UID de la tarjeta se guarda localmente en este dispositivo.",
                         style = MaterialTheme.typography.labelSmall,
-                        color = Ceniza.copy(alpha = 0.6f),
+                        color = Ceniza,
                         textAlign = TextAlign.Center
                     )
                 }
