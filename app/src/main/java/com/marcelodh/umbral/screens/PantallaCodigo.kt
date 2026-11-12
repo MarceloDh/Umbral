@@ -132,7 +132,7 @@ fun PantallaCodigo(
 
                 Spacer(Modifier.height(18.dp))
                 Text(
-                    text = "Ingresá tu código",
+                    text = "Ingresa tu código",
                     style = MaterialTheme.typography.headlineMedium,
                     color = Hueso
                 )
@@ -157,7 +157,7 @@ fun PantallaCodigo(
                     Spacer(Modifier.height(12.dp))
                     Text(
                         text = when {
-                            bloqueo != null -> "Demasiados intentos · esperá ${bloqueo.segundosRestantes} s"
+                            bloqueo != null -> "Demasiados intentos · espera ${bloqueo.segundosRestantes} s"
                             error -> "Código incorrecto · quedan ${(MAX_INTENTOS - vm.intentosFallidos).coerceAtLeast(1)} intentos"
                             codigo.isNotEmpty() -> "Verificando…"
                             else -> " "

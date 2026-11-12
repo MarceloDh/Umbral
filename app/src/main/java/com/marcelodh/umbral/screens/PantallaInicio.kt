@@ -128,7 +128,7 @@ fun PantallaInicio(
                             is EstadoPuerta.Bloqueada -> {
                                 Spacer(Modifier.height(14.dp))
                                 Etiqueta(
-                                    texto = "Reintentá en ${estado.segundosRestantes} s",
+                                    texto = "Vuelve a intentar en ${estado.segundosRestantes} s",
                                     color = Terracota,
                                     icono = Icons.Rounded.Lock
                                 )

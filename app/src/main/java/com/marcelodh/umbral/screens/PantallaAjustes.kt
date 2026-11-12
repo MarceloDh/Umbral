@@ -318,7 +318,7 @@ private fun DialogoCambioCodigo(
         text = {
             Column {
                 Text(
-                    text = "Elegí cuatro dígitos. Se guarda como hash SHA-256, nunca en texto plano.",
+                    text = "Elige cuatro dígitos. El código se guarda como un hash SHA-256.",
                     style = MaterialTheme.typography.bodySmall,
                     color = Ceniza
                 )

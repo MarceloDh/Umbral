@@ -2,6 +2,8 @@
 
 Umbral es una app Android para monitorear y operar una puerta simulada mediante Bluetooth. Dos teléfonos ejecutan la misma APK con perfiles distintos. El **Operador OT** solicita la apertura y el **Portero** confirma el estado, simula el actuador y registra eventos.
 
+[Descargar la APK de demostración para Android](https://github.com/MarceloDh/Umbral/releases/download/v1.0.0/Umbral-v1.0.0-debug.apk)
+
 ## Compilación
 
 Abre esta carpeta en Android Studio y sincroniza Gradle. El proyecto incluye Gradle Wrapper 8.13, usa Android SDK 36 y compila con Java 17. El mínimo es Android 8.0 (API 26).

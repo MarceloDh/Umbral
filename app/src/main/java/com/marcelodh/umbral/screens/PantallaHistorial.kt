@@ -113,7 +113,7 @@ fun PantallaHistorial(
                         )
                         Spacer(Modifier.height(6.dp))
                         Text(
-                            text = "Los accesos y las presencias detectadas van a aparecer acá.",
+                            text = "Aquí aparecerán los accesos y las detecciones de presencia.",
                             style = MaterialTheme.typography.bodySmall,
                             color = Ceniza,
                             textAlign = TextAlign.Center

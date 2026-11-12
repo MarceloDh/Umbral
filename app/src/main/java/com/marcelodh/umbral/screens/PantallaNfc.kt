@@ -140,7 +140,7 @@ fun PantallaNfc(
 
                 Spacer(Modifier.height(6.dp))
                 Text(
-                    text = if (vm.tarjetaVinculada == null) "Vinculá tu tarjeta" else "Apoyá la tarjeta",
+                    text = if (vm.tarjetaVinculada == null) "Vincula tu tarjeta" else "Acerca la tarjeta",
                     style = MaterialTheme.typography.headlineMedium,
                     color = Hueso,
                     textAlign = TextAlign.Center
@@ -148,9 +148,9 @@ fun PantallaNfc(
                 Spacer(Modifier.height(8.dp))
                 Text(
                     text = if (vm.tarjetaVinculada == null) {
-                        "Acercá una tarjeta al dorso del teléfono para registrarla como llave."
+                        "Acerca una tarjeta a la parte posterior del teléfono para registrarla como llave."
                     } else {
-                        "Mantené la tarjeta contra el lector hasta sentir la vibración."
+                        "Mantén la tarjeta cerca del lector hasta sentir la vibración."
                     },
                     style = MaterialTheme.typography.bodyMedium,
                     color = Ceniza,
@@ -196,7 +196,7 @@ fun PantallaNfc(
                             }
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                text = "El emulador no emula tarjetas. Probá esta pantalla en un teléfono con NFC; el resto de la app funciona igual.",
+                                text = "Para leer una tarjeta, usa un teléfono con NFC.",
                                 style = MaterialTheme.typography.bodySmall,
                                 color = Ceniza
                             )

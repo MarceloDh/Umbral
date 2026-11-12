@@ -203,7 +203,7 @@ fun PantallaRadar(
                     ) { lanzadorPermisos.launch(permisosBluetooth()) }
 
                     is EstadoEscaneo.BluetoothApagado -> AvisoRadar(
-                        texto = "Encendé el Bluetooth para empezar a barrer la puerta.",
+                        texto = "Activa el Bluetooth para buscar dispositivos cercanos.",
                         accion = "Encender Bluetooth"
                     ) {
                         runCatching {
@@ -212,13 +212,13 @@ fun PantallaRadar(
                     }
 
                     is EstadoEscaneo.SinBluetooth -> AvisoRadar(
-                        texto = "Este equipo no tiene Bluetooth LE. Podés seguir usando código y NFC.",
+                        texto = "Este equipo no tiene Bluetooth LE. Puedes seguir usando el código o NFC si tu equipo lo admite.",
                         accion = null,
                         alTocar = {}
                     )
 
                     is EstadoEscaneo.Fallo -> AvisoRadar(
-                        texto = "Android rechazó el escaneo (código ${estado.codigo}). Probá apagar y encender el Bluetooth.",
+                        texto = "Android rechazó el escaneo (código ${estado.codigo}). Intenta desactivar y volver a activar el Bluetooth.",
                         accion = "Reintentar"
                     ) { vm.iniciarEscaneo() }
 
@@ -252,7 +252,7 @@ fun PantallaRadar(
                         )
                         Spacer(Modifier.height(6.dp))
                         Text(
-                            text = "Los teléfonos y beacons aparecen cuando emiten. Mantené esta pantalla abierta unos segundos.",
+                            text = "Los teléfonos y las balizas aparecen cuando emiten una señal. Mantén esta pantalla abierta unos segundos.",
                             style = MaterialTheme.typography.bodySmall,
                             color = Ceniza
                         )
@@ -278,7 +278,7 @@ fun PantallaRadar(
                 }
 
                 Text(
-                    text = "Bluetooth LE detecta dispositivos cercanos que emiten señal, no personas. Para identificación real se usan beacons o un sensor IoT en la puerta.",
+                    text = "El radar detecta señales de dispositivos Bluetooth LE cercanos.",
                     style = MaterialTheme.typography.labelSmall,
                     color = Ceniza.copy(alpha = 0.55f),
                     modifier = Modifier.padding(horizontal = 22.dp, vertical = 8.dp)
