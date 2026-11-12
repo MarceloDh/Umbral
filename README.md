@@ -71,4 +71,4 @@ En Android 15 (API 35) se comprobó el inicio de sesión con los dos perfiles, l
 <img src="docs/operador-actual.png" alt="Panel Operador OT antes de enlazar" width="230">
 <img src="docs/portero-actual.png" alt="Herramientas de la Estación Portero" width="230">
 
-El [mockup](docs/mockup.md) documenta la navegación y el monitoreo. La [guía TI3042 completada](docs/Gu%C3%ADa%20TI3042%20-%20Umbral.docx) describe cómo se aplicó cada actividad al proyecto. La fuente Poppins se distribuye con su [licencia](app/src/main/assets/licenses/Poppins-OFL.txt).
+El [mockup](docs/mockup.md) documenta la navegación y el monitoreo. La [guía TI3042 completada](docs/Gu%C3%ADa%20-%20Marcelo%20Ducommun%20Umbral.docx) describe cómo se aplicó cada actividad al proyecto. La fuente Poppins se distribuye con su [licencia](app/src/main/assets/licenses/Poppins-OFL.txt).
